@@ -143,7 +143,7 @@ while True:
 		# otherwise, the eye aspect ratio is not below the blink
 		# threshold
 		else:
-			if abs(time.time() - mouthOpen_time) >= 3 and mouthOpen_time != -1:
+			if abs(time.time() - mouthOpen_time) >= 2 and mouthOpen_time != -1:
 				print("Yawning.")
 
 			mouthOpen_time = -1
