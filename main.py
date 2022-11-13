@@ -190,7 +190,7 @@ while True:
                 eyeClose_timer = time.time()
                 print("eye closed")
 
-            if abs(time.time() - eyeClose_timer) >= 2 and eyeClose_timer != -1:
+            if abs(time.time() - eyeClose_timer) >= 3 and eyeClose_timer != -1:
                 print("Closed eye for 2 sec.")
                 playsound('C:/Users/erich/Desktop/study_things/Hack/Hack/2022111302271.wav')
                 eyeClose_timer = -1
