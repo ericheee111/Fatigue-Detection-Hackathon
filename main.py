@@ -191,14 +191,12 @@ while True:
                 print("eye closed")
 
             if abs(time.time() - eyeClose_timer) >= 3 and eyeClose_timer != -1:
-                print("Closed eye for 2 sec.")
+                print("Closed eye for 3 sec.")
                 playsound('C:/Users/erich/Desktop/study_things/Hack/Hack/2022111302271.wav')
                 eyeClose_timer = -1
         # otherwise, the eye aspect ratio is not below the blink
         # threshold
         else:
-
-
             eyeClose_timer = -1
             # if the eyes were closed for a sufficient number of
             # then increment the total number of blinks
