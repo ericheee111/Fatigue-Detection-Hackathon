@@ -8,7 +8,7 @@ from scipy.spatial import distance
 from playsound import playsound
 
 
-def calculate_EAR(eye):
+def calculate_EAR(eye):     # dot
     A = distance.euclidean(eye[1], eye[5])
     B = distance.euclidean(eye[2], eye[4])
     C = distance.euclidean(eye[0], eye[3])
@@ -190,9 +190,9 @@ while True:
                 eyeClose_timer = time.time()
                 print("eye closed")
 
-            if abs(time.time() - eyeClose_timer) >= 3 and eyeClose_timer != -1:
+            if abs(time.time() - eyeClose_timer) >= 2 and eyeClose_timer != -1:
                 print("Closed eye for 3 sec.")
-                playsound('C:/Users/erich/Desktop/study_things/Hack/Hack/2022111302271.wav')
+                playsound('C:/Users/erich/Desktop/study_things/Hack/Hack/ring.wav')
                 eyeClose_timer = -1
         # otherwise, the eye aspect ratio is not below the blink
         # threshold
@@ -205,7 +205,7 @@ while True:
             # reset the eye frame counter
             blink_frame_count = 0
 
-        # check to see if the eye aspect ratio is below the blink
+        # check  to see if the eye aspect ratio is below the blink
         # threshold, and if so, increment the blink frame counter
         if MAR < mouth_thres:
             opmo_frame_counter += 1
